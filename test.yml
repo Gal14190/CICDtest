@@ -1,7 +1,13 @@
-commands:
-  # This step will depend on how you've set up your remote cluster
-    steps:
-      - run:
-          name: check
-          command: |
-            echo 'hi'
+pipeline {
+  stages {
+    stage("hello") {
+      steps {
+        echo 'hello'
+      }
+      stage("world") {
+      steps {
+        echo 'world'
+      }
+    }
+  }
+}
